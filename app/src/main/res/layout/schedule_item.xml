@@ -1,0 +1,31 @@
+<!-- res/layout/schedule_item.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Bold Stop Name at the Start -->
+    <TextView
+        android:id="@+id/textStopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingEnd="8dp"
+        android:text="Stop Name" />
+
+
+    <TextView
+        android:id="@+id/textArrival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingStart="8dp"
+        android:text="Arrival Time" />
+
+</LinearLayout>
