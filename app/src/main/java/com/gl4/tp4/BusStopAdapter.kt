@@ -12,7 +12,6 @@ import java.time.Duration
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
-import java.util.Date
 
 class BusStopAdapter(private var busStops: List<Schedule>, private val onItemClick: (Schedule) -> Unit) :
     RecyclerView.Adapter<BusStopAdapter.ViewHolder>() {
@@ -41,7 +40,6 @@ class BusStopAdapter(private var busStops: List<Schedule>, private val onItemCli
         holder.stopText.text = stop.stopName
         val instant = Instant.ofEpochSecond(stop.arrivalTime).minus(Duration.ofHours(7))
 
-        // Specify the desired time zone
         val zoneId = ZoneId.systemDefault()
 
         val formatter = DateTimeFormatter.ofPattern("HH:mm")
